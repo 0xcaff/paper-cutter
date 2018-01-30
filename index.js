@@ -39,7 +39,7 @@ const argv = yargs
 const { files, testing, loginPage, username, password } = argv;
 
 if (!files || !files.length) {
-  throw new TypeError('Place specify files.');
+  throw new TypeError("Place specify files.");
 }
 
 // Navigates to the log in page, enters the username and password and clicks the
@@ -53,7 +53,7 @@ const login = async (page, username, password) => {
 
   await page.click('input[type="submit"]');
 
-  await page.waitFor('.errorMessage, .end-user-login');
+  await page.waitFor(".errorMessage, .end-user-login");
   const errors = await page.evaluate(() =>
     Array.from(document.querySelectorAll(".errorMessage")).map(elems =>
       elems.textContent.trim()
@@ -88,13 +88,14 @@ const print = async (page, files) => {
 
   await waitAndClick(page, 'input[type="submit"].right');
 
-  await page.waitFor('#status');
+  await page.waitFor("#status");
 };
 
 async function main() {
   const browser = await puppeteer.launch({
     headless: !testing,
-    executablePath: testing ? "/usr/bin/chromium" : undefined
+    executablePath: testing ? "/usr/bin/chromium" : undefined,
+    args: argv._
   });
 
   try {
