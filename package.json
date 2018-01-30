@@ -1,11 +1,19 @@
 {
   "name": "paper-cutter",
+  "description": "A script to submit print jobs to a PaperCut MF Printer using puppeteer.",
   "version": "1.0.0",
   "bin": "./index.js",
   "repository": "git@github.com:0xcaff/paper-cutter.git",
   "author": "Martin Charles <martincharles07@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "puppeteer": "^1.0.0"
+    "puppeteer": "^1.0.0",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.10.2"
+  },
+  "scripts": {
+    "prettier": "prettier --write index.js"
   }
 }
