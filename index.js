@@ -97,7 +97,7 @@ async function main() {
   const browser = await puppeteer.launch({
     headless: !testing,
     executablePath: testing ? "/usr/bin/chromium" : undefined,
-    args: argv._
+    args: argv["--"]
   });
 
   try {
