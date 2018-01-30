@@ -89,20 +89,6 @@ const print = async (page, files) => {
   await waitAndClick(page, 'input[type="submit"].right');
 
   await page.waitFor('#status');
-  // await page.waitForFunction(
-  //   () => {
-  //     const statuses = Array.from(document.querySelectorAll("#status")).map(
-  //       elems => elems.textContent.trim()
-  //     );
-
-  //     const unfinished = statuses.filter(
-  //       statusText => !statusText.startsWith("Finished")
-  //     );
-
-  //     return unfinished.length === 0;
-  //   },
-  //   { polling: "mutation" }
-  // );
 };
 
 async function main() {
