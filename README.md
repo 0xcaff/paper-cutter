@@ -1,6 +1,11 @@
 # paper-cutter
 
-A script to programmatically submit print jobs to a PaperCut MF Printer using [puppeteer].
+A script to programmatically submit print jobs to a PaperCut MF Printer using
+[puppeteer].
+
+## Installation
+
+    yarn global add https://github.com/0xcaff/paper-cutter
 
 ## Usage
 
